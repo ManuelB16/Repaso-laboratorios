@@ -1,1 +1,5 @@
 Git Push: se utiliza para comunicar con otro repositorio, calcular lo que tu base de datos local tiene que la remota no tiene, y luego subir (push) la diferencia al otro repositorio
+git clone url.git
+git Branch verificar rama
+git remote remove origin Eliminar el remoto incorrecto: Elimina el remoto configurado incorrectamente con:
+git remote add origin Agregar el remoto correcto: Añade el remoto nuevamente usando solo la URL del repositorio url.git
