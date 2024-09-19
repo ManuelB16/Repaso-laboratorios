@@ -3,6 +3,8 @@ https://www.youtube.com/watch?v=wT-hIeYyxBg&list=PLx89vzy-Ta0qIf_swgzVY4z2PcqeGD
 
 Tienes lo de Jacoco? como es esa monda?
 
+Laboratorio 2-3, añades la dependencia al pom, es un build si no estoy mal, y construyes el proyecto, ahi te genera el archivo en target, el archivo empieza con s creo
+
 EN UN NAVEGADOR COLOCA EN EL ESPACIO DELINK localhost:8080
 
 # Repaso-laboratorios
