@@ -1,3 +1,6 @@
+https://www.youtube.com/watch?v=wT-hIeYyxBg&list=PLx89vzy-Ta0qIf_swgzVY4z2PcqeGDduO&index=2
+
+
 # Repaso-laboratorios
 Patrones de diseño
 Informacion adicional necesitada en caso tal
@@ -14,6 +17,10 @@ Iterator
 Observer
 Strategy
 Template Method
+
+
+
+![image](https://github.com/user-attachments/assets/2fec8229-2737-459b-91fc-99ae405f2c2e)
 
 
 
