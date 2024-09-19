@@ -3,3 +3,16 @@ git clone url.git
 git Branch verificar rama
 git remote remove origin Eliminar el remoto incorrecto: Elimina el remoto configurado incorrectamente con:
 git remote add origin Agregar el remoto correcto: Añade el remoto nuevamente usando solo la URL del repositorio url.git
+
+La herramienta Apache Maven se usa para gestionar y manejar proyectos de software. La base de maven para un proyecto es el concepto de un modelo de objeto de proyecto (POM), Maven puede gestionar la compilación, los informes y la documentación de un proyecto a partir de este modelo, que se concreta en el archivo pom.xml.
+
+mvn archetype:generate -DgroupId=com.ejemplo -DartifactId=mi-proyecto -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+El comando mvn package en Maven se utiliza para compilar el código fuente de tu proyecto y empaquetarlo en su formato distribuible, como un archivo JAR (Java Archive) o WAR (Web Application Archive), dependiendo del tipo de proyecto.
+
+Detalles del proceso:
+Cuando ejecutas mvn package, Maven realiza las siguientes tareas:
+
+Compilación: Se compilan las clases Java del proyecto en el directorio target/classes.
+Empaquetado: Maven crea un archivo empaquetado (por ejemplo, un JAR o WAR) a partir de los archivos compilados, incluyendo cualquier recurso necesario (como archivos de configuración o dependencias).
+El resultado final de mvn package suele estar ubicado en la carpeta target/ de tu proyecto
