@@ -37,111 +37,111 @@ Solucion general y repetible a problemas comunes en la construccion de un softwa
 
 
 
-Creacionales Como se construye el objeto
-Estructurales Como se estructuran clases y objetos
-Comportamiento Como interactuan los objetos entre si
+1. Creacionales Como se construye el objeto
+2. Estructurales Como se estructuran clases y objetos
+3. Comportamiento Como interactuan los objetos entre si
 
 
 Pruebas de software
 El objetivo de las pruebas es buscar bugs
-● Muchos de los bugs comunes están relacionados con las 
+- Muchos de los bugs comunes están relacionados con las 
 abstracciones de los paradigmas de programación.
-● Permite encontrar errores en etapas tempranas del desarrollo.
-Ventajas
-• Ayuda a encontrar algunos defectos de Software.
-• Entre más pruebas más confiabilidad en el 
+- Permite encontrar errores en etapas tempranas del desarrollo.
+- Ventajas
+- Ayuda a encontrar algunos defectos de Software.
+- Entre más pruebas más confiabilidad en el 
 software (?).
-• Cuando se modifica el software, ayuda a 
+- Cuando se modifica el software, ayuda a 
 encontrar errores que son introducidos por las 
 modificaciones.
-Desventajas
-• Cuantas pruebas se pueden hacer a mano? 1 - 
+- Desventajas
+- Cuantas pruebas se pueden hacer a mano? 1 - 
 100 - 1000 - 10000?
-• Se hacen muy pocas pruebas.
-• No es muy agradable hacer pruebas.
-• No se prueban todos los escenarios posibles.
-Tipos de pruebas
-Caja blanca y caja negra
-Casos de prueba
+- Se hacen muy pocas pruebas.
+- No es muy agradable hacer pruebas.
+- No se prueban todos los escenarios posibles.
+- Tipos de pruebas
+- Caja blanca y caja negra
+- Casos de prueba
 Es un conjunto de condiciones o variables 
 bajo las cuales se determinará si una 
 aplicación, un sistema de software o una 
 característica o comportamiento de estos 
 resulta o no aceptable
-Casos de prueba
-•Input: n
-•Valid: 1 <= n <= 10
-•Invalid: not (1 <= n <= 10) == (n < 1) or (n > 10)
+- Casos de prueba
+- Input: n
+- Valid: 1 <= n <= 10
+- Invalid: not (1 <= n <= 10) == (n < 1) or (n > 10)
 LAS PRUEBAS EXHAUSTIVAS SON COSTOSAS.
 IDEA: PARTIR EL DOMINIO EN CLASES DE 
 EQUIVALENCIA
 Casos de prueba
-• Si un valor/condición de una de partición pasa la prueba, es 
+- Si un valor/condición de una de partición pasa la prueba, es 
 probable que los demás casos de la misma partición pasen. 
-• Si un valor/condición de una partición produce un fallo, es 
+- Si un valor/condición de una partición produce un fallo, es 
 probable que los demás casos de la misma partición también 
 fallen.
 Pruebas clase de equivalencia
-Casos de prueba
-• Complemento para las clases de equivalencia.
-•Al examinar las especificaciones para identificar 
+- Casos de prueba
+- Complemento para las clases de equivalencia.
+Al examinar las especificaciones para identificar 
 clases de equivalencia, se debe tener especial 
 consideración con los límites.
-•Busca probar los límites entre las particiones 
+- Busca probar los límites entre las particiones 
 dadas por las clases de equivalencia
 Pruebas Unitarias
-• Unidad básica a probar es el método.
-• Pruebas aisladas que solo se enfocan en la lógica del método.
-• Cada método debe tener pruebas para los diferentes clases de 
+- Unidad básica a probar es el método.
+- Pruebas aisladas que solo se enfocan en la lógica del método.
+- Cada método debe tener pruebas para los diferentes clases de 
 equivalencia
-Pruebas Unitarias
-• GIVEN. —- Insumos y parámetros necesarios para realizar la prueba.
-• WHEN —- Ejecutar el método a probar.
-• THEN —- Evaluar los resultados.
+# Pruebas Unitarias
+- GIVEN. —- Insumos y parámetros necesarios para realizar la prueba.
+- WHEN —- Ejecutar el método a probar.
+- THEN —- Evaluar los resultados.
 Pruebas Unitarias
 Nombramiento
-1.test[Feature being tested]
+1. test[Feature being tested]
 testIsNotAnAdultIfAgeLessThan18
-2.Feature to be tested
+2. Feature to be tested
 IsNotAnAdultIfAgeLessThan18
-3.[MethodName]_[StateUnderTest]_[ExpectedBehavior]
+3. [MethodName]_[StateUnderTest]_[ExpectedBehavior]
 isAdult_AgeLessThan18_False
-4.[MethodName]_[ExpectedBehavior]_[StateUnderTest]
+4. [MethodName]_[ExpectedBehavior]_[StateUnderTest]
 isAdult_False_AgeLessThan18
 Pruebas Unitarias
 Nombramiento
-5.Should_[ExpectedBehavior]_When_[StateUnderTest]
+5. Should_[ExpectedBehavior]_When_[StateUnderTest]
 Should_ThrowException_When_AgeLessThan18
-6.When_[StateUnderTest]_Expect_[ExpectedBehavior]
+6. When_[StateUnderTest]_Expect_[ExpectedBehavior]
 When_AgeLessThan18_Expect_isAdultAsFalse
-7.Given_Preconditions_When_StateUnderTest_Then_ExpectedBehavior
+7. Given_Preconditions_When_StateUnderTest_Then_ExpectedBehavior
 Given_UserIsAuthenticated_When_InvalidAccountNumberIsUsedToWithdraw
 Money_Then_TransactionsWillFail
 Pruebas Unitarias
 JUnit
-● Framework de pruebas para Java.
-● @Test
-○ La anotación @Test le dice a JUnit que el método public void method al que está pegada puede 
+- Framework de pruebas para Java.
+- @Test
+- La anotación @Test le dice a JUnit que el método public void method al que está pegada puede 
 ser ejecutado como un caso de prueba as a test case.
-○ Para correr el método, JUnit primero construye una instancia de la clase y después invoca el 
+- Para correr el método, JUnit primero construye una instancia de la clase y después invoca el 
 método.
-○ Cualquier excepción lanzada será reportada por JUnit como una falla (failure). If no exceptions are 
+- Cualquier excepción lanzada será reportada por JUnit como una falla (failure). If no exceptions are 
 thrown, the test is assumed to have succeeded.
-● @Before: Método que prepara el ambiente para cada caso de prueba
-● @After: Método que limpia el ambiente de cada caso de prueba
-● @BeforeClass: Corre una sola vez antes de todos los caso de prueba de la clase de prueba.
-● @AfterClass: Corre una sola vez después d todos los casos de prueba de la clase
+- @Before: Método que prepara el ambiente para cada caso de prueba
+- @After: Método que limpia el ambiente de cada caso de prueba
+- @BeforeClass: Corre una sola vez antes de todos los caso de prueba de la clase de prueba.
+- @AfterClass: Corre una sola vez después d todos los casos de prueba de la clase
 Pruebas Unitarias
 JUnit
-● Cada clase de pruebas debe llamarse de la misma forma que la clase que pretende 
+- Cada clase de pruebas debe llamarse de la misma forma que la clase que pretende 
 probar eje:
-● Clase Calculadora.java. —- CalculadoraTest.java
-● Cada método de la clase deberá llevar el nombre del método que valida empezando 
+- Clase Calculadora.java. —- CalculadoraTest.java
+- Cada método de la clase deberá llevar el nombre del método que valida empezando 
 con la palabra test. Ej testSumar()
-● La estructura de directorios de las clases de pruebas deben coincidir con la 
+- La estructura de directorios de las clases de pruebas deben coincidir con la 
 estructura de directorios del proyecto.
-● Definir el objeto Assertion como estático import static org.junit.jupiter.api.Assertions.*;
-● Tener en cuenta los branches dentro del código (Condicionales) para los diferentes 
+- Definir el objeto Assertion como estático import static org.junit.jupiter.api.Assertions.*;
+- Tener en cuenta los branches dentro del código (Condicionales) para los diferentes 
 caminos que puede tomar la ejecución del código.
 Pruebas Unitarias
 SonarQube
@@ -149,13 +149,13 @@ Plataforma de código abierto que permite detectar errores,
 vulnerabilidades y malas prácticas en el código
 Pruebas Unitarias
 SonarQube
-• Evalúa el código fuente sin necesidad de ejecutarlo.
-• Detecta problemas en tiempo de desarrollo.
-• Identifica errores y posibles fallos de seguridad.
-• Clasifica los problemas según su gravedad.
-• Proporciona métricas sobre la calidad del código.
-• Genera informes de deuda técnica y mantenibilidad.
-TDD
+- Evalúa el código fuente sin necesidad de ejecutarlo.
+- Detecta problemas en tiempo de desarrollo.
+- Identifica errores y posibles fallos de seguridad.
+- Clasifica los problemas según su gravedad.
+- Proporciona métricas sobre la calidad del código.
+- Genera informes de deuda técnica y mantenibilidad.
+# TDD
 Desarrollo guiado por pruebas de 
 software, o Test-driven development es 
 una práctica de ingeniería de software 
@@ -207,6 +207,6 @@ Es la forma más común de IoC. Aquí, en lugar de que un objeto cree sus depend
 
 Tres tipos principales de DI:
 
-Constructor Injection: Las dependencias se pasan al objeto a través del constructor.
-Setter Injection: Las dependencias se establecen mediante métodos de establecimiento (setters).
-Interface Injection: El objeto debe implementar una interfaz que el contenedor utilizará para inyectar las dependencias.
+- Constructor Injection: Las dependencias se pasan al objeto a través del constructor.
+- Setter Injection: Las dependencias se establecen mediante métodos de establecimiento (setters).
+- Interface Injection: El objeto debe implementar una interfaz que el contenedor utilizará para inyectar las dependencias.
