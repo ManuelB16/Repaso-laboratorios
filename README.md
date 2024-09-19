@@ -1,6 +1,8 @@
 https://www.youtube.com/watch?v=wT-hIeYyxBg&list=PLx89vzy-Ta0qIf_swgzVY4z2PcqeGDduO&index=2
 
 
+EN UN NAVEGADOR COLOCA EN EL ESPACIO DELINK localhost:8080
+
 # Repaso-laboratorios
 Patrones de diseño
 Informacion adicional necesitada en caso tal
